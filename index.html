@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>X-Coin</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .coin-logo {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .balance-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .main-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .feature-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 12px;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .progress-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            background: rgba(255, 255, 255, 0.2);
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: #00ff88;
+            width: 99.9%;
+            height: 100%;
+        }
+
+        .nav-tabs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+
+        .nav-item {
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .nav-item.active {
+            background: #00ff88;
+            color: #16213e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="coin-logo">🪙</div>
+            <h1>X-Coin</h1>
+        </div>
+
+        <div class="balance-section">
+            <h3>Your Balance:</h3>
+            <h1>1</h1>
+        </div>
+
+        <div class="main-buttons">
+            <button class="feature-button">
+                <h3>X-Galaxy</h3>
+                <p>Explore the galaxy</p>
+            </button>
+            <button class="feature-button">
+                <h3>X-Treasures</h3>
+                <p>Collect rewards</p>
+            </button>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 8px;">
+                <span>999</span>
+                <span>1000</span>
+            </div>
+        </div>
+
+        <div class="nav-tabs">
+            <div class="nav-item">👥 Mates</div>
+            <div class="nav-item">✅ Tasks</div>
+            <div class="nav-item active">🤖 X-AI</div>
+            <div class="nav-item">🚀 Boost</div>
+        </div>
+    </div>
+
+    <script>
+        Telegram.WebApp.ready();
+        
+        // Handle X-Coin logo tap
+        document.querySelector('.coin-logo').addEventListener('click', () => {
+            Telegram.WebApp.sendData('TAP');
+        });
+
+        // Handle navigation clicks
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active class from all nav items
+                document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+                // Add active class to the clicked item
+                item.classList.add('active');
+                // Send data to Telegram
+                const action = item.textContent.trim();
+                Telegram.WebApp.sendData(action);
+            });
+        });
+    </script>
+</body>
+</html>
