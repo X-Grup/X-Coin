@@ -1,154 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>X-Coin</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <style>
-        body {
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            color: white;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            margin: 0;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .coin-logo {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-
-        .balance-section {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .main-buttons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .feature-button {
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            border-radius: 12px;
-            padding: 15px;
-            color: white;
-            text-align: center;
-            backdrop-filter: blur(5px);
-        }
-
-        .progress-section {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-
-        .progress-bar {
-            background: rgba(255, 255, 255, 0.2);
-            height: 10px;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            background: #00ff88;
-            width: 99.9%;
-            height: 100%;
-        }
-
-        .nav-tabs {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            text-align: center;
-        }
-
-        .nav-item {
-            padding: 12px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .nav-item.active {
-            background: #00ff88;
-            color: #16213e;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blum Web App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="coin-logo">🪙</div>
-            <h1>X-Coin</h1>
-        </div>
+        <header>
+            <h1>Blum</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#earn">Earn</a></li>
+                    <li><a href="#memepad">Memepad</a></li>
+                    <li><a href="#frens">Frens</a></li>
+                    <li><a href="#wallet">Wallet</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <div class="balance-section">
-            <h3>Your Balance:</h3>
-            <h1>1</h1>
-        </div>
-
-        <div class="main-buttons">
-            <button class="feature-button">
-                <h3>X-Galaxy</h3>
-                <p>Explore the galaxy</p>
-            </button>
-            <button class="feature-button">
-                <h3>X-Treasures</h3>
-                <p>Collect rewards</p>
-            </button>
-        </div>
-
-        <div class="progress-section">
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
+        <section id="home">
+            <h2>Invite friends to earn points!</h2>
+            <p>Spread the crypto among friends, let them join Blum and earn % of their farmed BP.</p>
+            <div class="score">
+                <h3>Score</h3>
+                <p>10% of farmed by frens</p>
+                <p>2.5% from their refs</p>
             </div>
-            <div style="display: flex; justify-content: space-between; margin-top: 8px;">
-                <span>999</span>
-                <span>1000</span>
+            <div class="earn">
+                <h3>Turn your friends into traders and earn TON</h3>
+                <p>Earn 20%</p>
+                <p>Earn 2.5%</p>
             </div>
-        </div>
+        </section>
 
-        <div class="nav-tabs">
-            <div class="nav-item">👥 Mates</div>
-            <div class="nav-item">✅ Tasks</div>
-            <div class="nav-item active">🤖 X-AI</div>
-            <div class="nav-item">🚀 Boost</div>
-        </div>
+        <section id="earn">
+            <h2>Earn 122</h2>
+            <div class="ikers">
+                <h3>Ikers:</h3>
+                <p>I the slot to win the $TON... BP</p>
+                <button id="splash">SPLASH +1,000 BP</button>
+            </div>
+            <div class="weekly">
+                <h3>Weekly</h3>
+                <p>Earn for checking socials +0/540 BP</p>
+                <button id="open-weekly">Open 0/6</button>
+            </div>
+            <div class="new">
+                <h3>New* OnChain* Socials* Academy*</h3>
+                <button id="start-degens">Degens In The Sky +150 BP</button>
+            </div>
+        </section>
+
+        <section id="wallet">
+            <h2>Wallet</h2>
+            <div class="toncoin">
+                <h3>Toncoin</h3>
+                <p>@ TON $0</p>
+            </div>
+            <div class="points">
+                <h3>Points</h3>
+                <p>Meme points: 0 MP</p>
+                <p>Bium points: 8,135.8 BP</p>
+            </div>
+            <button id="trade">Trade to earn</button>
+            <button id="farm">Farm</button>
+        </section>
+
+        <section id="frens">
+            <h2>Frens</h2>
+            <div class="referrals">
+                <h3>Your Referrals</h3>
+                <p>Total Referrals: <span id="referral-count">0</span></p>
+            </div>
+        </section>
     </div>
 
-    <script>
-        Telegram.WebApp.ready();
-        
-        // Handle X-Coin logo tap
-        document.querySelector('.coin-logo').addEventListener('click', () => {
-            Telegram.WebApp.sendData('TAP');
-        });
-
-        // Handle navigation clicks
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const action = item.textContent.trim();
-                Telegram.WebApp.sendData(action);
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
