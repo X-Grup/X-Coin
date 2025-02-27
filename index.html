@@ -135,25 +135,17 @@
     </div>
 
     <script>
-        Telegram.WebApp.ready();
-        
-        // Handle X-Coin logo tap
-        document.querySelector('.coin-logo').addEventListener('click', () => {
-            Telegram.WebApp.sendData('TAP');
-        });
-
-        // Handle navigation clicks
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', () => {
-                // Remove active class from all nav items
-                document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
-                // Add active class to the clicked item
-                item.classList.add('active');
-                // Send data to Telegram
-                const action = item.textContent.trim();
-                Telegram.WebApp.sendData(action);
-            });
-        });
-    </script>
+    // Get referral ID from URL
+    const urlParams = new URLSearchParams(window.location.search)
+    const referralId = urlParams.get('startapp')
+    
+    // Send referral data to bot
+    if(referralId) {
+        Telegram.WebApp.sendData(JSON.stringify({
+            type: "REFERRAL",
+            referrer: referralId
+        }))
+    }
+</script>
 </body>
 </html>
