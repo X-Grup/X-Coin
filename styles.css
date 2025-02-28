@@ -1,0 +1,136 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #00ff88;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #00ff88;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #00cc66;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #00ff88;
+}
+
+button {
+    background-color: #00ff88;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00cc66;
+}
+
+.score, .earn, .ikers, .weekly, .new, .toncoin, .points, .referrals {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+}
+
+.score h3, .earn h3, .ikers h3, .weekly h3, .new h3, .toncoin h3, .points h3, .referrals h3 {
+    margin-top: 0;
+    color: #00ff88;
+}
+
+.score p, .earn p, .ikers p, .weekly p, .new p, .toncoin p, .points p, .referrals p {
+    margin: 10px 0;
+    color: #cccccc;
+}
+
+#splash, #open-weekly, #start-degens, #trade, #farm {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#splash {
+    background-color: #ff6f61;
+}
+
+#splash:hover {
+    background-color: #ff3b2f;
+}
+
+#open-weekly {
+    background-color: #6b5b95;
+}
+
+#open-weekly:hover {
+    background-color: #4b3a75;
+}
+
+#start-degens {
+    background-color: #88b04b;
+}
+
+#start-degens:hover {
+    background-color: #688b2b;
+}
+
+#trade {
+    background-color: #ffa500;
+}
+
+#trade:hover {
+    background-color: #cc8400;
+}
+
+#farm {
+    background-color: #007bff;
+}
+
+#farm:hover {
+    background-color: #0056b3;
+}
